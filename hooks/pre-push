@@ -1,0 +1,7 @@
+#!/bin/sh
+# hooks/pre-push: git runs this before every push. One script per rule lives in checks/.
+# A check fails by exiting non-zero; the first failure stops the push.
+for check in checks/*.sh; do
+  sh "$check" || { echo "BLOCKED by $check" >&2; exit 1; }
+done
+echo "all checks passed"
