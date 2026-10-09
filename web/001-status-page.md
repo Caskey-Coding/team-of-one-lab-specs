@@ -1,5 +1,5 @@
 ---
-status: in-progress
+status: completed
 verify: grep -q "Last run" web/status.html
 live: curl -fsS https://caskey-coding.github.io/team-of-one-lab-web/status.html | grep -q "Last run"
 ---
