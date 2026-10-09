@@ -1,5 +1,5 @@
 ---
-status: ready
+status: in-progress
 verify: grep -q "Checked by the gate" web/status.html
 live: curl -fsS --max-time 20 https://caskey-coding.github.io/team-of-one-lab-web/status.html | grep -q "Checked by the gate"
 ---
